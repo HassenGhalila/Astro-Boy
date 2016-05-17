@@ -1,4 +1,4 @@
 # Astro-Boy
 This is my first repository
 
-I comit a change!!!
+I commit a change!!!
