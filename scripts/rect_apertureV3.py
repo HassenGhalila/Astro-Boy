@@ -22,10 +22,10 @@ def rect_apert(lamda=600,b=0.1*1.E-3,h=0.1*1.E-3, D = 1):
     BB, HH =meshgrid(B,H)
     I=(sin(BB)/BB)**2 * (sin(HH)/HH) **2
     
-    fig = plt.figure(figsize=(15, 5))
+    fig = plt.figure(figsize=(5, 5))
     fig.suptitle('Fraunhofer Diffraction of rectangular aperture',fontsize=14, fontweight='bold')
     
-    ax1 = fig.add_subplot(121)
+    ax1 = fig.add_subplot(111)
     ax1.imshow(I, cmap=cm.copper, interpolation='bilinear',
               origin='lower',vmin=I.min(), vmax= 0.01*I.max())
     
@@ -39,18 +39,18 @@ def rect_apert(lamda=600,b=0.1*1.E-3,h=0.1*1.E-3, D = 1):
     
     #3D
     
-    ax2 = fig.add_subplot(122, projection='3d')
-    ax2.plot_surface(BB, HH ,I , rstride=10, cstride=10, cmap=cm.copper, alpha=0.5)
+    #ax2 = fig.add_subplot(122, projection='3d')
+    #ax2.plot_surface(BB, HH ,I , rstride=15, cstride=15, cmap=cm.copper, alpha=0.5)
     ##ax2.contour(BB, HH ,I, zdir='x', offset=100 * X_Mmin, cmap=cm.Oranges)
     ##ax2.contour(BB, HH ,I, zdir='y', offset=100 * Y_Mmax, cmap=cm.Oranges)
     ##ax2.contourf(BB, HH ,I, zdir='x', offset=100 * X_Mmin, cmap=cm.Blues, alpha=0.5)
     ##ax2.contourf(BB, HH ,I, zdir='y', offset=100 * Y_Mmax, cmap=cm.Blues, alpha=0.5)
-    ax2.set_zlim3d(0, 1)
+    #ax2.set_zlim3d(0, 1)
     
     #ax2.set_xticks([]); ax2.set_yticks([])
-    ax2.set_xlabel(r'$X \ (10^{-2} \ m)$',fontsize=14, fontweight='bold')
-    ax2.set_ylabel(r'$Y \ (10^{-2} \ m)$',fontsize=14, fontweight='bold')
-    ax2.set_zlabel(r'$I(Y, Y)/I_0$',fontsize=14, fontweight='bold')
-    ax2.set_title(r"$wavelength \ \lambda = % .0d \ nm , \ b = %s \ m, \ h = %s \ m $"% (lamda,b, h),fontsize=14)
+    #ax2.set_xlabel(r'$X \ (10^{-2} \ m)$',fontsize=14, fontweight='bold')
+    #ax2.set_ylabel(r'$Y \ (10^{-2} \ m)$',fontsize=14, fontweight='bold')
+    #ax2.set_zlabel(r'$I(Y, Y)/I_0$',fontsize=14, fontweight='bold')
+    #ax2.set_title(r"$wavelength \ \lambda = % .0d \ nm , \ b = %s \ m, \ h = %s \ m $"% (lamda,b, h),fontsize=14)
     
     plt.show()

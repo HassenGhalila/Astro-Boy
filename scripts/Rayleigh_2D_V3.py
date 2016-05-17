@@ -26,9 +26,9 @@ def Rayleigh_2d(lamda=600,r=0.1*1.E-3,d= 5*1.E-3,D = 2):
     
     I=I1 + I2
     
-    fig = plt.figure(figsize=(15, 5))
+    fig = plt.figure(figsize=(5, 5))
     
-    ax1 = fig.add_subplot(121)
+    ax1 = fig.add_subplot(111)
     ax1.imshow(I, cmap=cm.copper, interpolation='bilinear',
               origin='lower',vmin=I.min(), vmax=0.01 * I.max())
     
@@ -37,13 +37,13 @@ def Rayleigh_2d(lamda=600,r=0.1*1.E-3,d= 5*1.E-3,D = 2):
     ax1.set_title('Fraunhofer Diffraction of circular aperture',fontsize=16)
     
     #fig 3D
-    ax2 = fig.add_subplot(122, projection='3d')
-    ax2.plot_surface( XX, YY,I, rstride=10, cstride=10, cmap=cm.copper, alpha=0.4)
-    ax2.set_zlim3d(0, I.max())
+    #ax2 = fig.add_subplot(122, projection='3d')
+    #ax2.plot_surface( XX, YY,I, rstride=15, cstride=15, cmap=cm.copper, alpha=0.4)
+    #ax2.set_zlim3d(0, I.max())
     
-    ax2.set_xlabel(r'$X \ (10^{-2} \ m)$',fontsize=14, fontweight='bold')
-    ax2.set_ylabel(r'$Y \ (10^{-2} \ m)$',fontsize=14, fontweight='bold')
-    ax2.set_zlabel(r'$I(Y, Y)/I_0$',fontsize=14, fontweight='bold')
-    ax2.set_title('Fraunhofer Diffraction of circular aperture',fontsize=16)
+    #ax2.set_xlabel(r'$X \ (10^{-2} \ m)$',fontsize=14, fontweight='bold')
+    #ax2.set_ylabel(r'$Y \ (10^{-2} \ m)$',fontsize=14, fontweight='bold')
+    #ax2.set_zlabel(r'$I(Y, Y)/I_0$',fontsize=14, fontweight='bold')
+    #ax2.set_title('Fraunhofer Diffraction of circular aperture',fontsize=16)
     
     plt.show()

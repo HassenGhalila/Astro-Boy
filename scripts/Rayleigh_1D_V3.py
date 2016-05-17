@@ -25,7 +25,7 @@ def Rayleigh_1d(lamda=600,r=0.1*1.E-3,d= 5*1.E-3,D = 2):
     
     I=I1 + I2
     
-    fig = plt.figure(figsize=(10,5))
+    fig = plt.figure(figsize=(7,5))
     fig.suptitle('Fraunhofer Diffraction by circular aperture',fontsize=14, fontweight='bold')
     
     ax1 = fig.add_subplot(111)

@@ -16,7 +16,7 @@ def Diff_1S(lamda=600,b=0.1*1.E-3,D = 1):
     
     I=(sin(B)/B)**2
     
-    fig = plt.figure(figsize=(10, 5))
+    fig = plt.figure(figsize=(7, 5))
     fig.suptitle('Fraunhofer Diffraction by one slit',fontsize=14, fontweight='bold')
     
     ax1 = fig.add_subplot(111)
